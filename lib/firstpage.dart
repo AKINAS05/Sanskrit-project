@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sanskritapp/appinfopage.dart';
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
 
@@ -31,7 +32,7 @@ class _FirstPageState extends State<FirstPage> {
         child: Text('App बद्दल माहिती',style: TextStyle(fontWeight:FontWeight.bold,
             fontSize: 38),),
         onPressed: (){
-          print('Show App Info');
+          Navigator.push(context, MaterialPageRoute(builder: (context) {  return AppInfoPage();} ,));
         },
       ),
         SizedBox( height: mediaQuery1.size.height*0.007,),
